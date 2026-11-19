@@ -7,13 +7,12 @@ import { HomeComponent } from './components/home-component/home-component';
 import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { ServiceSeries } from './services/service.series';
+import { SerieComponent } from './components/serie-component/serie-component';
 
 @NgModule({
-  declarations: [App, MenuComponent, HomeComponent],
+  declarations: [App, MenuComponent, HomeComponent, SerieComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [provideBrowserGlobalErrorListeners()
-    , provideHttpClient(), ServiceSeries
-  ],
+  providers: [provideBrowserGlobalErrorListeners(), provideHttpClient(), ServiceSeries],
   bootstrap: [App],
 })
 export class AppModule {}

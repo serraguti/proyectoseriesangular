@@ -22,15 +22,12 @@
             <ul class="dropdown-menu">
                 @for (serie of arrayseries; track serie){
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" 
+                        [routerLink]="['/serie', serie.idSerie]">
                             {{serie.nombre}}
                         </a>
                     </li>    
                 }
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
             </li>
             <li class="nav-item">
