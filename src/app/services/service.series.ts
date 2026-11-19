@@ -16,7 +16,6 @@ export class ServiceSeries {
         return firstValueFrom(
             this._http.get<Serie[]>(url)
         )
-
     }
 
     async findSerieAsync(idserie: number): Promise<Serie> {
