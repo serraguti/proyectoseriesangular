@@ -1,1 +1,26 @@
-<p>update-personaje-serie-component works!</p>
+<h1>Update personaje</h1>
+<form #form="ngForm">
+    Seleccione personaje: 
+    <select name="cajaidpersonaje" #cajaidpersonaje
+        class="form-control">
+        @for (personaje of arraypersonajes; track personaje){
+            <option value="{{personaje.idPersonaje}}">
+                {{personaje.nombre}}
+            </option>
+        }
+    </select>
+    Nueva serie
+    <select name="cajaidserie" #cajaidserie
+        class="form-control">
+        @for (serie of arrayseries; track serie){
+            <option value="{{serie.idSerie}}">
+                {{serie.nombre}}
+            </option>
+        }
+    </select>
+    <button (click)="modificarPersonaje()"
+        class="btn btn-warning">
+        Modificar
+    </button>
+</form>
+<h3 style="color:blue">{{mensaje}}</h3>

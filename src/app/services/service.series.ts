@@ -35,6 +35,14 @@ export class ServiceSeries {
         )
     }
 
+    async getPersonajesAsync(): Promise<Personaje[]> {
+        let request = "api/personajes"
+        let url = environment.apiejemplos + request
+        return firstValueFrom(
+            this._http.get<Personaje[]>(url)
+        )
+    }
+
     async cambiarPersonajeSerie(idpersonaje: number, idserie: number): Promise<any> {
         let request = "api/personajes/updatepersonajeserie/update/"
             + idpersonaje + "/" + idserie
