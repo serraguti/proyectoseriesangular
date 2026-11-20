@@ -8,9 +8,18 @@ import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { ServiceSeries } from './services/service.series';
 import { SerieComponent } from './components/serie-component/serie-component';
+import { PersonajesComponent } from './components/personajes-component/personajes-component';
+import { UpdatePersonajeSerieComponent } from './components/update-personaje-serie-component/update-personaje-serie-component';
 
 @NgModule({
-  declarations: [App, MenuComponent, HomeComponent, SerieComponent],
+  declarations: [
+    App,
+    MenuComponent,
+    HomeComponent,
+    SerieComponent,
+    PersonajesComponent,
+    UpdatePersonajeSerieComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners(), provideHttpClient(), ServiceSeries],
   bootstrap: [App],
