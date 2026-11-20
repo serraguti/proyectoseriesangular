@@ -10,6 +10,7 @@ import { ServiceSeries } from './services/service.series';
 import { SerieComponent } from './components/serie-component/serie-component';
 import { PersonajesComponent } from './components/personajes-component/personajes-component';
 import { UpdatePersonajeSerieComponent } from './components/update-personaje-serie-component/update-personaje-serie-component';
+import { CreatePersonajeComponent } from './components/create-personaje-component/create-personaje-component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { UpdatePersonajeSerieComponent } from './components/update-personaje-ser
     SerieComponent,
     PersonajesComponent,
     UpdatePersonajeSerieComponent,
+    CreatePersonajeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners(), provideHttpClient(), ServiceSeries],

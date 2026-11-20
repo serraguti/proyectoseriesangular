@@ -1,4 +1,4 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable, provideIdleServiceWith } from "@angular/core";
 import { Serie } from "../models/serie";
 import { environment } from "../../environments/environment.development";
@@ -49,6 +49,15 @@ export class ServiceSeries {
         let url = environment.apiejemplos + request
         return firstValueFrom(
             this._http.put(url, null)
+        )
+    }
+
+    async insertarPersonaje(personaje: Personaje): Promise<any> {
+        let request = "api/personajes"
+        let url = environment.apiejemplos + request
+        let header = new HttpHeaders().set("content-type", "application/json")
+        return firstValueFrom(
+            this._http.post(url, personaje, {headers: header})
         )
     }
 }
