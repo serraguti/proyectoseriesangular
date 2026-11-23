@@ -60,4 +60,13 @@ export class ServiceSeries {
             this._http.post(url, personaje, {headers: header})
         )
     }
+
+    async insertarSerieAsync(serie: Serie): Promise<any> {
+        let request = "api/series/insertarserie/create"
+        let url = environment.apiejemplos + request
+        let header = new HttpHeaders().set("content-type", "application/json")
+        return firstValueFrom(
+            this._http.post(url, serie, {headers: header})
+        )
+    }
 }
