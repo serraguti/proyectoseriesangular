@@ -11,6 +11,7 @@ import { SerieComponent } from './components/serie-component/serie-component';
 import { PersonajesComponent } from './components/personajes-component/personajes-component';
 import { UpdatePersonajeSerieComponent } from './components/update-personaje-serie-component/update-personaje-serie-component';
 import { CreatePersonajeComponent } from './components/create-personaje-component/create-personaje-component';
+import { CreateSerieComponent } from './components/create-serie-component/create-serie-component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CreatePersonajeComponent } from './components/create-personaje-componen
     PersonajesComponent,
     UpdatePersonajeSerieComponent,
     CreatePersonajeComponent,
+    CreateSerieComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners(), provideHttpClient(), ServiceSeries],

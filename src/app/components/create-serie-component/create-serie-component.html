@@ -1,0 +1,15 @@
+<h2>Create Serie</h2>
+<form #form="ngForm">
+    Id serie
+    <input type="number" name="cajaid" #cajaid class="form-control"/>
+    Serie
+    <input type="text" name="cajanombre" #cajanombre class="form-control"/>
+    Imagen
+    <input type="text" name="cajaimagen" #cajaimagen class="form-control"/>
+    Año
+    <input type="number" name="cajaanyo" #cajaanyo class="form-control"/>
+    <button (click)="insertarSerie()" class="btn btn-success">
+        Crear serie
+    </button>
+</form>
+<h2 style="color:blue">{{mensaje}}</h2>
